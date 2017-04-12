@@ -18,7 +18,7 @@
 
 ...
 
-## Some Individual Developers(Welcome to add your name on it!)
+## Some Individual Developers(Welcome to add your name on it! ;) )
 
 - [Milestone](http://www.muzixing.com/)
 
@@ -26,6 +26,3 @@
 
 - [Antonin Bas](https://github.com/antoninbas)
 
-- [Wasdns](https://github.com/Wasdns)
-
-...
