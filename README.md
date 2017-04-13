@@ -16,3 +16,5 @@ P4 Language Programmer Guide.
 - P4 Install Guide, eg.p4factory, bmv2 etc.
 
 - P4 Papers
+
+- White Paper
