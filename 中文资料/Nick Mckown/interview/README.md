@@ -20,7 +20,7 @@ Nick McKeown：Barefoot Networks首席科学家和合伙创办人, 斯坦福大�
 
 经常访问[SDxCentral](https://www.sdxcentral.com/cloud/definitions/software-defined-everything-sdx-part-1-definition/)和[SDNLAB](http://www.sdnlab.com/)的读者们都知道接下来的内容是什么：McKeown教授和加州大学伯克利分校的Scott Shenker教授的研究发明了[软件定义网络(SDN)](https://www.sdxcentral.com/sdn/)与[OpenFlow协议](https://www.sdxcentral.com/sdn/definitions/what-is-openflow/)；他们与Martin Casado一起创立了[Nicira Networks](https://www.sdxcentral.com/listings/nicira-acquired-by-vmware/)公司。
 
-Nicira现在是VMware公司的一部分，这意味着McKeown教授已经品尝过三次看着自己创立的公司被收购的滋味了。
+Nicira现在是VMware公司的一部分，这意味着McKeown教授已经品尝过三次(Nicira、 Abrizio以及Nemo)看着自己创立的公司被收购的滋味了。
 
 现在，他正在站在第四次的征程上。在本周Barefoot Networks披露了他们的计划(开发一种可编程的交换机芯片，以及推动P4语言的发展)的同时，SDxCentral迅速前往了Palo Alto(美国加州帕罗奥图市，Barefoot Networks公司和Stanford University所在地)。Barefoot的办公楼坐落于毗邻斯坦福大学的一条住宅区的街道上，楼前悬挂着他们的标识，门上写着：“请进：一群非常棒的人正在里头工作。”
 
@@ -52,7 +52,7 @@ McKeown：你懂得😉，这是件很有意思的事情。我们在开始经营
 
 所以它并不会很快消失，有可能OpenFlow的兼容性会提升。但是你能够通过P4告诉Tofino(由Barefoot研发，支持P4的可编程芯片)或者其他任意的可编程芯片去支持OpenFlow1.3协议或者其他协议，可编程芯片就能够依照我们的指令要求改变其运行状态，并且和其他的设备进行交互。
 
-我们为Open vSwitch开发了非商业目的的P4前端编译器。Ben Pfaff在VMware做Open vSwitch的相关工作，大约在一年前他在第一次P4会议上探讨过这个问题，他想弄清楚这个玩意怎么实现，此后便一发不可收拾(taken on a life of its own)。现在有相当多的文章描述我们的工作。后来Ben与普林斯顿大学的Jen Rexford教授的一名PhD学生一同开发了一款编译器，并把他们的项目称为Pisces。它目前还不是Open vSwitch的主要分支，不过我想这是早晚的事情。(UPDATE：这位学生的名字是[Muhammad Shahbaz](http://www.cs.princeton.edu/~mshahbaz/))，虽然那时他和Rexford教授一起工作，但是他在普林斯顿的导师是Nick Feamster。)
+我们为Open vSwitch开发了非商业目的的P4前端编译器。Ben Pfaff在VMware做Open vSwitch的相关工作，大约在一年前他在第一次P4会议上探讨过这个问题，他想弄清楚这个玩意怎么实现，此后便一发不可收拾(taken on a life of its own)。现在有相当多的文章描述我们的工作。后来Ben与普林斯顿大学的Jen Rexford教授的一名PhD学生一同开发了一款编译器，并把他们的项目称为Pisces。它目前还不是Open vSwitch的主要分支，不过我想这是早晚的事情。(UPDATE：这位学生的名字是[Muhammad Shahbaz](http://www.cs.princeton.edu/~mshahbaz/)，虽然那时他和Rexford教授一起工作，但是他在普林斯顿的导师是Nick Feamster。)
 
 P4有一点好：你可以从一个P4程序着手或者将其视作一种潜在的能力，将一个描述交换机行为的P4程序编译至装有Tofino的交换机、hypervisor交换机或者其他种类的交换机，这些交换机就会以不同的性能做相同的事情。设备间的协同工作也是一种迫切需要的能力。倘若你想改变这些交换机的行为，那么只要改一下P4程序再重新编译即可。
 
