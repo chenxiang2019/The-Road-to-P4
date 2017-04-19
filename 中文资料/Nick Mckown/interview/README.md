@@ -50,15 +50,15 @@ Nicira现在是VMware公司的一部分，这意味着McKeown教授已经品尝�
 
 - 采访者：但是，OpenFlow接下去会怎么样呢？它死了吗？
 
-**McKeown:** 我不这样认为。目前已经有许多的应用来满足用户的一些非常简单的需求，有可能除了以太网和IPv4方面就没其他的内容了，同时一定需要部署到固定功能的ASIC硬件 - 好吧，OpenFlow的设计允许他们这样干。
+**McKeown:** 我不这样认为。目前已经有许多的应用来满足用户的一些非常简单的需求，这些需求有可能除了以太网和IPv4方面就没其他的内容了，还需要部署到固定功能的ASIC硬件 - 好吧，OpenFlow的设计允许他们这样干。
 
 所以它并不会很快消失，有可能OpenFlow的兼容性会提升。但是你能够通过P4告诉Tofino(由Barefoot研发，支持P4的可编程芯片)或者其他任意的可编程芯片去支持OpenFlow1.3协议或者其他协议，可编程芯片就能够依照我们的指令要求改变其运行状态，并且和其他的设备进行交互。
 
-我们为Open vSwitch开发了非商业目的的P4前端编译器。Ben Pfaff在VMware做Open vSwitch的相关工作，大约在一年前他在第一次P4会议上探讨过这个问题，他想弄清楚这个玩意怎么实现，此后便一发不可收拾(taken on a life of its own)。现在有相当多的文章描述我们的工作。后来Ben与普林斯顿大学的Jen Rexford教授的一名PhD学生一同开发了一款编译器，并把他们的项目称为Pisces。它目前还不是Open vSwitch的主要分支，不过我想这是早晚的事情。(UPDATE：这位学生的名字是[Muhammad Shahbaz](http://www.cs.princeton.edu/~mshahbaz/)，虽然那时他和Rexford教授一起工作，但是他在普林斯顿的导师是Nick Feamster。)
+我们开发了非商业目的、能够适配OpenvSwitch的P4前端编译器。Ben Pfaff在VMware做Open vSwitch的相关工作，大约在一年前他在第一次P4会议上探讨过这个问题，他想弄清楚这个玩意怎么实现，此后便一发不可收拾(taken on a life of its own)。现在有相当多的文章描述我们的工作。后来Ben与普林斯顿大学的Jen Rexford教授的一名博士学生一同开发了一款编译器，并把他们的项目称为PisCES。它目前还不是Open vSwitch的主要分支，不过我想这是早晚的事情。(UPDATE：这位学生的名字是[Muhammad Shahbaz](http://www.cs.princeton.edu/~mshahbaz/)，虽然那时他和Rexford教授一起工作，但是他在普林斯顿的导师是Nick Feamster。)
 
 P4有一点好：你可以从一个P4程序着手或者将其视作一种潜在的能力，将一个描述交换机行为的P4程序编译至装有Tofino的交换机、hypervisor交换机或者其他种类的交换机，这些交换机就会以不同的性能做相同的事情。设备间的协同工作也是一种迫切需要的能力。倘若你想改变这些交换机的行为，那么只要改一下P4程序再重新编译即可。
 
-- 采访者：这就是“一次写入，多次配置”的原则。
+- 采访者：这就是“一次编写，多处运行”的原则。
 
 **McKeown:** 是的，我们在今年的SIGCOMM上发表了一篇论文，讲的是：为什么要做这个？为什么要为Open vSwitch做一个P4的前端编译器？
 
