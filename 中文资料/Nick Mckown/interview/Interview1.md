@@ -1,4 +1,18 @@
-# Barefoot Network - McKeown: OpenFlow, P4 以及可编程网络（一）
+# Barefoot Network - McKeown: OpenFlow, P4 以及可编程网络
+
+译者注：
+
+本文译自2016年6月17号SDxCentral的编辑[Craig Matsumoto](https://www.sdxcentral.com/author/craig-matsumoto/)对Nick McKeown教授的采访。
+
+Craig Matsumoto：SDxCentral.com的主编，负责该站点的内容及新闻。在SDN方面久经沙场，2010年开始对SDN领域进行相关的报道，从事新闻报道行业已有23余年。Craig生活在硅谷，可以通过他的个人邮箱与他取得联系：craig@sdxcentral.com 
+
+Nick McKeown：Barefoot Networks首席科学家和合伙创办人, 斯坦福大学计算机科学教授, 在学术/工业界25年经验。SDN的共同发明人，P4、ONF、ON.Lab的共同创办人;曾创办三个成功的新创公司Nicira、 Abrizio、Nemo。
+
+原文：
+
+- [Barefoot Networks’ McKeown: On OpenFlow, P4 & the Programmable Network](https://www.sdxcentral.com/articles/interview/mckeown-barefoot-networks-openflow-p4/2016/06/)
+
+- [Barefoot Networks’ McKeown: Part 2](https://www.sdxcentral.com/articles/interview/barefoot-networks-mckeown-part-2/2016/06/)
 
 ## 概要
 
@@ -16,9 +30,9 @@ Nicira现在是VMware公司的一部分，这意味着McKeown教授已经品尝�
 
 - 你一定很喜欢创业的感觉。
 
-McKeown：你懂得😉，这是件很有意思的事情。（我们在开始经营每一家创业公司的时候要么放弃要么假定该技术将会被放弃[?]。） => 原文：On every single one of these companies, we’ve started by either giving away or assuming the technology would be given away.
+McKeown：你懂得😉，这是件很有意思的事情。我们在开始经营每一家创业公司的时候要么选择放弃要么认为我们的技术会过时。
 
-工作时我们认为我们干的只比Horizon稍微先进一点点，结果在几年后成了大麻烦。这使创业变成了一种智力游戏，并且我逐渐掌握了从研究中提升实践能力的方法，不断参与到提升实践能力的尝试中去。
+我们认为我们的工作只有一小部分和Horizon相似，结果在几年后招来了大麻烦。这使创业变成了一种智力游戏，并且我逐渐掌握了从研究中提升实践能力的方法，不断参与到提升实践能力的尝试中去。
 
 但这些尝试总是变的不对劲，换个角度来说，工业界对它们其实并不感冒。这就是SDN和OpenFlow的故事，人们都认为我们疯了，但我们已经被它们的魅力深深吸引住了。倘若你拥有坚定你自己看法的勇气，那么你的工作会变的更有意思，因为没人和你做相同的事情。
 
