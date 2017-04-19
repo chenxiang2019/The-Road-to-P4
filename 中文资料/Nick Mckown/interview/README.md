@@ -24,7 +24,7 @@ Nick McKeown：Barefoot Networks首席科学家和合伙创办人, 斯坦福大�
 
 Nicira现在是VMware公司的一部分，这意味着McKeown教授已经品尝过三次(Nicira、 Abrizio以及Nemo)看着自己创立的公司被收购的滋味了。
 
-现在，他正在站在第四次的征程上。在本周Barefoot Networks披露了他们的计划(开发一种可编程的交换机芯片，以及推动P4语言的发展)的同时，SDxCentral迅速前往了Palo Alto(美国加州帕罗奥图市，Barefoot Networks公司和Stanford University所在地)。Barefoot的办公楼坐落于毗邻斯坦福大学的一条住宅区的街道上，楼前悬挂着他们的标识，门上写着：“请进：一群非常棒的人正在里头工作。”
+现在，他正在站在第四次的征程上。在本周Barefoot Networks披露了他们的计划(开发一种可编程的交换机芯片，以及推动P4语言的发展)的同时，SDxCentral迅速前往了Palo Alto(美国加州帕罗奥图市，Barefoot Networks公司和Stanford University所在地)。Barefoot的办公楼坐落于毗邻斯坦福大学的一条住宅区的街道上，楼前悬挂着他们的标识，门前的牌子上写着：“Come in: We’re OPEN and awesome!”
 
 继续往下读吧，你会了解到McKeown教授的创业经历，他对P4的构想，以及由他负责的OpenFlow的现状。
 
