@@ -1,6 +1,6 @@
 # Barefoot Network - McKeown: OpenFlow, P4 以及可编程网络
 
-# 译者注：
+### 译者注：
 
 本文译自2016年6月17号SDxCentral的编辑[Craig Matsumoto](https://www.sdxcentral.com/author/craig-matsumoto/)对Nick McKeown教授的采访。
 
@@ -8,7 +8,7 @@ Craig Matsumoto：SDxCentral.com的主编，负责该站点的内容及新闻。
 
 Nick McKeown：Barefoot Networks首席科学家和合伙创办人, 斯坦福大学计算机科学教授, 在学术/工业界25年经验。SDN的共同发明人，P4、ONF、ON.Lab的共同创办人;曾创办三个成功的新创公司Nicira、 Abrizio、Nemo。
 
-# 原文：
+### 原文
 
 - [Barefoot Networks’ McKeown: On OpenFlow, P4 & the Programmable Network](https://www.sdxcentral.com/articles/interview/mckeown-barefoot-networks-openflow-p4/2016/06/)
 
@@ -102,7 +102,7 @@ McKeown：现在 - 我维护了一个开源的网络项目的图谱，这个图�
 
 这个工作很关键但不受待见。就像Linux，每个人都需要一个操作系统，但没人想自己开发。
 
-# 译者信息
+### 译者信息
 
 译者：福州大学，陈翔。Github：https://github.com/Wasdns
 
