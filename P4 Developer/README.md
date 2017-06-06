@@ -17,12 +17,3 @@
 - [National Chiao Tung University, NCTU, China](http://www.nctu.edu.tw/)
 
 ...
-
-## Some Individual Developers(Welcome to add your name on it! ;) )
-
-- [Milestone](http://www.muzixing.com/)
-
-- [TakeshiTseng](https://github.com/TakeshiTseng)
-
-- [Antonin Bas](https://github.com/antoninbas)
-
