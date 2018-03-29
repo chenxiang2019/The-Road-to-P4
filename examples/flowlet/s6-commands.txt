@@ -1,0 +1,18 @@
+table_add dmac forward 10.0.0.5 => 5
+table_add dmac forward 10.0.0.6 => 6
+table_add dmac forward 10.0.0.7 => 7
+table_add dmac forward 10.0.0.8 => 8
+table_set_default flowlet lookup_flowlet_map
+table_set_default new_flowlet update_flowlet_id
+table_add ecmp_group set_ecmp_select 10.0.0.1/32 => 0 4
+table_add ecmp_group set_ecmp_select 10.0.0.2/32 => 0 4
+table_add ecmp_group set_ecmp_select 10.0.0.3/32 => 0 4
+table_add ecmp_group set_ecmp_select 10.0.0.4/32 => 0 4
+table_add ecmp_nhop set_nhop 0 => 10.0.0.1 1
+table_add ecmp_nhop set_nhop 1 => 10.0.0.2 2
+table_add ecmp_nhop set_nhop 2 => 10.0.0.3 3
+table_add ecmp_nhop set_nhop 3 => 10.0.0.4 4
+table_add forward set_dmac 10.0.0.1 => 00:00:00:00:00:01
+table_add forward set_dmac 10.0.0.2 => 00:00:00:00:00:02
+table_add forward set_dmac 10.0.0.3 => 00:00:00:00:00:03
+table_add forward set_dmac 10.0.0.4 => 00:00:00:00:00:04
