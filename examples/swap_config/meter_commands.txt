@@ -1,0 +1,5 @@
+table_set_default m_table _nop
+table_add m_table m_action aa:aa:aa:aa:aa:aa => 0
+table_set_default m_filter _drop
+table_add m_filter _nop 0 =>
+meter_array_set_rates my_meter 0.0000005:1 0.00001:1
