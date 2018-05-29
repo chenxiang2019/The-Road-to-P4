@@ -1,4 +1,4 @@
-# The-Road-to-P4: The Programmer Guide of P4 Language.
+# The-Road-to-P4: The Programmer Guide of the P4 Language.
 
 ## Related Work
 
@@ -18,17 +18,16 @@ In a word, this repo maintains some useful materials which could be leveraged on
 - Our Chinese translations of some English materials;
 - And so on...
 
-## Subrepositories
+## Other Hands-on Repositories
 
 This repository also provides several subrepositories for readers to get start with P4 language:
-- [p4-examples](https://github.com/Wasdns/p4-examples): Running P4_14 programs on BMv2.
-- [p4env-installer](https://github.com/Wasdns/p4env-installer): Fully-automated installer for creating P4 workspace. 
-- [learn-P4-by-examples](https://github.com/Wasdns/learn-P4-by-examples): P4 examples with Chinese documents. 
+- [NSP4: A Network Simulator for the P4 language](https://github.com/Emil-501/NSP4)
+- [p4-examples: Running P4_14 programs on BMv2](https://github.com/Wasdns/p4-examples)
+- [p4env-installer: Fully-Automated Installer for Creating P4 Workspace](https://github.com/Wasdns/p4env-installer) 
+- [learn-P4-by-examples: Some P4 examples with Chinese documents](https://github.com/Wasdns/learn-P4-by-examples) 
 
 ## Contributing
 
 For contributing, you can submit a PR to this repository. Besides, you could also provide some materials if you like to us by sending Emails. Thanks a lot!
 
-## Contact us
-
-Mail: wasdnsxchen@gmail.com
+If you have any questions, please send a mail to wasdnsxchen@gmail.com
