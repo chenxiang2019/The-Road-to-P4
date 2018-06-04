@@ -41,6 +41,8 @@ action _drop() {
     drop();
 }
 
+action nop() {}
+
 field_list l3_hash_fields {
     ipv4.srcAddr;
     ipv4.dstAddr;
@@ -67,8 +69,7 @@ register flowlet_id {
     instance_count : 8192;
 }
 
-action set_nhop(nhop_ipv4, port) {
-    modify_field(ingress_metadata.nhop_ipv4, nhop_ipv4);
+action set_nhop(port) {
     modify_field(standard_metadata.egress_spec, port);
     add_to_field(ipv4.ttl, -1);
 }
@@ -92,7 +93,7 @@ action lookup_flowlet_map() {
 }
 
 table flowlet {
-    actions { lookup_flowlet_map; }
+    actions { lookup_flowlet_map; nop; }
 }
 
 action update_flowlet_id() {
@@ -102,7 +103,7 @@ action update_flowlet_id() {
 }
 
 table new_flowlet {
-    actions { update_flowlet_id; }
+    actions { update_flowlet_id; nop; }
 }
 
 field_list flowlet_l3_hash_fields {
@@ -138,6 +139,7 @@ table ecmp_group {
     actions {
         _drop;
         set_ecmp_select;
+        nop;
     }
     size : ECMP_GROUP_TABLE_SIZE;
 }
@@ -149,69 +151,31 @@ table ecmp_nhop {
     actions {
         _drop;
         set_nhop;
+        nop;
     }
     size : ECMP_NHOP_TABLE_SIZE;
 }
 
-action set_dmac(dmac) {
-    modify_field(ethernet.dstAddr, dmac);
-}
-
 table forward {
     reads {
-        ingress_metadata.nhop_ipv4 : exact;
+        ipv4.dstAddr : exact;
     }
     actions {
-        set_dmac;
+        set_nhop;
         _drop;
     }
     size: 512;
 }
 
-action rewrite_mac(smac) {
-    modify_field(ethernet.srcAddr, smac);
-}
-
-table send_frame {
-    reads {
-        standard_metadata.egress_port: exact;
-    }
-    actions {
-        rewrite_mac;
-        _drop;
-    }
-    size: 256;
-}
-
-action forward(port) {
-    modify_field(standard_metadata.egress_spec, port);
-    add_to_field(ipv4.ttl, -1);
-}
-
-table dmac {
-	reads {
-		ipv4.dstAddr : exact;
-	}
-	actions {
-        forward;
-        _drop;
-    }
-}
-
 control ingress {
-	apply(dmac) {
-		miss {
-			apply(flowlet);
-		    if (ingress_metadata.flow_ipg > FLOWLET_INACTIVE_TOUT) {
-		        apply(new_flowlet);
-		    }
-		    apply(ecmp_group);
-		    apply(ecmp_nhop);
-		    apply(forward);
-		}
-	}
+	apply(flowlet);
+    if (ingress_metadata.flow_ipg > FLOWLET_INACTIVE_TOUT) {
+        apply(new_flowlet);
+    }
+    apply(ecmp_group);
+    apply(ecmp_nhop);
+    apply(forward);
 }
 
 control egress {
-    //apply(send_frame);
 }

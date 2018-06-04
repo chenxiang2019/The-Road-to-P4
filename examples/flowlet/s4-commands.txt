@@ -1,8 +1,12 @@
-table_add dmac forward 10.0.0.1 => 1
-table_add dmac forward 10.0.0.2 => 1
-table_add dmac forward 10.0.0.3 => 1
-table_add dmac forward 10.0.0.4 => 1
-table_add dmac forward 10.0.0.5 => 2
-table_add dmac forward 10.0.0.6 => 2
-table_add dmac forward 10.0.0.7 => 2
-table_add dmac forward 10.0.0.8 => 2
+table_set_default flowlet nop
+table_set_default new_flowlet nop
+table_set_default ecmp_group nop
+table_set_default ecmp_nhop nop
+table_add forward set_nhop 10.0.0.1 => 1
+table_add forward set_nhop 10.0.0.2 => 1
+table_add forward set_nhop 10.0.0.3 => 1
+table_add forward set_nhop 10.0.0.4 => 1
+table_add forward set_nhop 10.0.0.5 => 2
+table_add forward set_nhop 10.0.0.6 => 2
+table_add forward set_nhop 10.0.0.7 => 2
+table_add forward set_nhop 10.0.0.8 => 2
